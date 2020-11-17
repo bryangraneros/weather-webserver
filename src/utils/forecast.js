@@ -9,7 +9,7 @@ const forecast = (latitud, longitud, callback) =>{
             callback('Error al buscar la locación. Intente con otra busqueda.', undefined)
         }else{
             const weather = body.current
-            callback(undefined, weather.weather_descriptions[0] + '. La temperatura actual es de ' + weather.temperature + '°C. Con una sensación térmica de ' + weather.feelslike + '°C.')
+            callback(undefined, weather.weather_descriptions[0] + '. La temperatura actual es de ' + weather.temperature + '°C. Con una sensación térmica de ' + weather.feelslike + '°C. La humedad es de: ' + weather.humidity + '%')
         }
     })
 }
